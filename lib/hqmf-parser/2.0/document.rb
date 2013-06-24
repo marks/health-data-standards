@@ -109,7 +109,7 @@ module HQMF2
       if @doc.at_xpath('cda:QualityMeasureDocument/cda:title/@value', NAMESPACES)
         @doc.at_xpath('cda:QualityMeasureDocument/cda:title/@value', NAMESPACES).inner_text
       else
-        @doc.at_xpath('cda:QualityMeasureDocument/cda:title/@value', NAMESPACES).
+        @doc.at_xpath('cda:QualityMeasureDocument/cda:title/@value', NAMESPACES)
       end
     end
     
