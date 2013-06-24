@@ -106,7 +106,11 @@ module HQMF2
     # Get the title of the measure
     # @return [String] the title
     def title
-      @doc.at_xpath('cda:QualityMeasureDocument/cda:title/@value', NAMESPACES).inner_text
+      if @doc.at_xpath('cda:QualityMeasureDocument/cda:title/@value', NAMESPACES)
+        @doc.at_xpath('cda:QualityMeasureDocument/cda:title/@value', NAMESPACES).inner_text
+      else
+        @doc.at_xpath('cda:QualityMeasureDocument/cda:title/@value', NAMESPACES).
+      end
     end
     
     # Get the description of the measure
